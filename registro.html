@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
+    <script src = "js/validaciones.js"></script>
     <title>Formulario de Registro</title>
 </head>
-<body background="C:\Users\Administrador\Desktop\Sprint\Sprint\Imagenes\unname.gif">
-    <form class="formulario" id = form_nuevo_usuario >
+<body>
+    <form class="formulario" id = form_nuevo_usuario method="POST" onsubmit="return validar_nombre_usuario()">
         <h4>Formulario</h4>
-        <input id ="dato_nombre_usuario" class="control" type="text" placeholder="Ingrese su Nombre">
-        <input class="control" type="text" id ="dato_edad_usuario" placeholder="Ingrese su Edad">
-        <input class="control" type="password" id ="dato_contraseña" placeholder="Ingrese su Contraseña">
-        <button class="boton" id="enviar_registro">Enviar el Formulario</button>
+        <input class="control" type="text" name = "nombre" id ="dato_nombre_usuario" placeholder="Ingrese su Nombre"> 
+        <input class="control" type="text" name = "edad" id ="dato_edad_usuario" placeholder="Ingrese su Edad">
+        <input class="control" type="password" name = "contrasena" id ="dato_contrasena" placeholder="Ingrese su Contraseña"> 
+        <button type = "submit" class="boton" id="enviar_registro" value="registro">Enviar el Formulario</button>
     </form>
 </body>
 </html>
